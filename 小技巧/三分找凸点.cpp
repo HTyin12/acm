@@ -1,7 +1,7 @@
-long long calc(long long x){
+auto calc=[&](int x){
 	
-}
-int SanFen(int l,int r){
+};
+auto find=[&](int l,int r){
 	int L=l;
 	while(l<r-1){
 		int mid=(l+r)>>1;
@@ -11,4 +11,4 @@ int SanFen(int l,int r){
 	}
 	int res=calc(l)>calc(r)?l:r;
 	return calc(L)>calc(res)?L:res;
-}
+};
