@@ -1,4 +1,4 @@
-//O(n^2 log(n) + m log(n))
+//O(nmlog(n) + nm)
 const int N=3e3+5;
 vector<pair<int,long long>>p[N];
 long long h[N],d[N];int cnt[N],vis[N];
@@ -11,7 +11,7 @@ bool spfa(int s){
     while(q.size()){
         int u=q.front();q.pop();vis[u]=0;
         for(auto it:p[u]){
-            int v=it.first；long long w=it.second;
+            int v=it.first;long long w=it.second;
             if(h[v]>h[u]+w){
                 h[v]=h[u]+w;
                 cnt[v]=cnt[u]+1;
